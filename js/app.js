@@ -23,7 +23,7 @@ var albumHTML = "";
  const $mainContent = $('.main-content');
  var $albumWrap = "";
  var $albumArt = "";
- 
+
 //*  set search field focus. Everything else triggers off of events *//
  $('#search').focus();
 //* --------------------- *//
@@ -48,7 +48,7 @@ const processAlbumsData = (data) => {
 		});
 		albumsHTML += '</li>'
 	} else {																									// otherwise, we did not find a matching album.
-		albumsHTML = '<li class="no-albums"> <i class="material-icons icon-help">help_outline</i>No albums found that match: [search form value].</li>';
+		albumsHTML = '<li class="no-albums"> <i class="material-icons icon-help">help_outline</i>No albums found that match: ' + albumSearch + '.</li>';
 	};  // end if	
 	
 	$albumsID.append(albumsHTML);										// append in our html.
